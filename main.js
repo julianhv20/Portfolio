@@ -92,16 +92,20 @@ window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
+console.log(sections);
 
 const scrollActive = () => {
 	const scrollY = window.scrollY;
 
 	sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop - 50;
+		console.log(sectionHeight);
+		const sectionTop = current.offsetTop - 58;
+		console.log(sectionTop);
 		const sectionId = current.getAttribute("id");
+		console.log(sectionId);
 		const sectionClass = document.querySelector(
-			"nav__menu a[href*=" + sectionId + "]"
+			".nav__menu a[href*=" + sectionId + "]"
 		);
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
