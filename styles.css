@@ -727,6 +727,11 @@ svg {
 		backdrop-filter: blur(25px);
 		-webkit-backdrop-filter: blur(25px);
 	}
+
+	.projects__img {
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 @media screen and (min-width: 1152px) {
